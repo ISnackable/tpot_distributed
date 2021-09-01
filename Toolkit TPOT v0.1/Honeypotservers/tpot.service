@@ -27,10 +27,7 @@ ExecStartPre=-/bin/bash -c '/sbin/ethtool --offload $(/sbin/ip address | grep "^
 ExecStartPre=/bin/bash -c '/sbin/ethtool -K $(/sbin/ip address | grep "^2: " | awk \'{ print $2 }\' | tr -d [:punct:]) gso off gro off'
 ExecStartPre=/bin/bash -c '/sbin/ip link set $(/sbin/ip address | grep "^2: " | awk \'{ print $2 }\' | tr -d [:punct:]) promisc on'
 
-# Modify access rights on docker.sock for netdata
-ExecStartPre=-/bin/chmod 666 /var/run/docker.sock
-
-#Start Filebeat
+# Start Filebeat
 ExecStart=/usr/share/filebeat/bin/filebeat -c /etc/filebeat/filebeat.yml -path.home /usr/share/filebeat -path.config /etc/filebeat -path.data /var/lib/filebeat -path.logs /var/log/filebeat
 
 # Set iptables accept rules to avoid forwarding to honeytrap / NFQUEUE
