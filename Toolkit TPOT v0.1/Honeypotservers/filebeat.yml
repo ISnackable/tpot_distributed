@@ -5,10 +5,6 @@ filebeat.inputs:
     - /data/fatt/log/fatt.log
   fields:
     type: Fatt
-    t-pot_ip_ext: ${MY_EXTIP}
-    t-pot_ip_int: ${MY_INTIP}
-    t-pot_hostname: ${MY_HOSTNAME}
-  json.keys_under_root: true
 
 - type: log
   enabled: true
@@ -16,42 +12,30 @@ filebeat.inputs:
     - /data/suricata/log/eve.json
   fields:
     type: Suricata
-    t-pot_ip_ext: ${MY_EXTIP}
-    t-pot_ip_int: ${MY_INTIP}
-    t-pot_hostname: ${MY_HOSTNAME}
   json.keys_under_root: true
-
+ 
 - type: log
   enabled: true
   paths:
     - /data/p0f/log/p0f.json
   fields:
     type: P0f
-    t-pot_ip_ext: ${MY_EXTIP}
-    t-pot_ip_int: ${MY_INTIP}
-    t-pot_hostname: ${MY_HOSTNAME}
   json.keys_under_root: true
-
+ 
 - type: log
   enabled: true
   paths:
     - /data/adbhoney/log/adbhoney.json
   fields:
     type: Adbhoney
-    t-pot_ip_ext: ${MY_EXTIP}
-    t-pot_ip_int: ${MY_INTIP}
-    t-pot_hostname: ${MY_HOSTNAME}
   json.keys_under_root: true
-
+ 
 - type: log
   enabled: true
   paths:
     - /data/ciscoasa/log/ciscoasa.log
   fields:
     type: Ciscoasa
-    t-pot_ip_ext: ${MY_EXTIP}
-    t-pot_ip_int: ${MY_INTIP}
-    t-pot_hostname: ${MY_HOSTNAME}
 
 - type: log
   enabled: true
@@ -59,10 +43,6 @@ filebeat.inputs:
     - /data/citrixhoneypot/logs/server.log
   fields:
     type: CitrixHoneypot
-    t-pot_ip_ext: ${MY_EXTIP}
-    t-pot_ip_int: ${MY_INTIP}
-    t-pot_hostname: ${MY_HOSTNAME}
-  json.keys_under_root: true
 
 - type: log
   enabled: true
@@ -70,53 +50,30 @@ filebeat.inputs:
     - /data/conpot/log/*.json
   fields:
     type: ConPot
-    t-pot_ip_ext: ${MY_EXTIP}
-    t-pot_ip_int: ${MY_INTIP}
-    t-pot_hostname: ${MY_HOSTNAME}
   json.keys_under_root: true
-
+ 
 - type: log
   enabled: true
   paths:
     - /data/cowrie/log/cowrie.json
   fields:
     type: Cowrie
-    t-pot_ip_ext: ${MY_EXTIP}
-    t-pot_ip_int: ${MY_INTIP}
-    t-pot_hostname: ${MY_HOSTNAME}
   json.keys_under_root: true
-
+ 
 - type: log
   enabled: true
   paths:
     - /data/dionaea/log/dionaea.json
   fields:
     type: Dionaea
-    t-pot_ip_ext: ${MY_EXTIP}
-    t-pot_ip_int: ${MY_INTIP}
-    t-pot_hostname: ${MY_HOSTNAME}
   json.keys_under_root: true
-
+ 
 - type: log
   enabled: true
   paths:
     - /data/dicompot/log/dicompot.log
   fields:
     type: Dicompot
-    t-pot_ip_ext: ${MY_EXTIP}
-    t-pot_ip_int: ${MY_INTIP}
-    t-pot_hostname: ${MY_HOSTNAME}
-  json.keys_under_root: true
-
-- type: log
-  enabled: true
-  paths:
-    - /data/ddospot/log/*.log
-  fields:
-    type: DdosPot
-    t-pot_ip_ext: ${MY_EXTIP}
-    t-pot_ip_int: ${MY_INTIP}
-    t-pot_hostname: ${MY_HOSTNAME}
 
 - type: log
   enabled: true
@@ -124,41 +81,14 @@ filebeat.inputs:
     - /data/elasticpot/log/elasticpot.json
   fields:
     type: ElasticPot
-    t-pot_ip_ext: ${MY_EXTIP}
-    t-pot_ip_int: ${MY_INTIP}
-    t-pot_hostname: ${MY_HOSTNAME}
   json.keys_under_root: true
-
-- type: log
-  enabled: true
-  paths:
-    - /data/endlessh/log/endlessh.log
-  fields:
-    type: Endlessh
-    t-pot_ip_ext: ${MY_EXTIP}
-    t-pot_ip_int: ${MY_INTIP}
-    t-pot_hostname: ${MY_HOSTNAME}
-
+ 
 - type: log
   enabled: true
   paths:
     - /data/glutton/log/glutton.log
   fields:
     type: Glutton
-    t-pot_ip_ext: ${MY_EXTIP}
-    t-pot_ip_int: ${MY_INTIP}
-    t-pot_hostname: ${MY_HOSTNAME}
-
-- type: log
-  enabled: true
-  paths:
-    - /data/hellpot/log/hellpot.log
-  fields:
-    type: HellPot
-    t-pot_ip_ext: ${MY_EXTIP}
-    t-pot_ip_int: ${MY_INTIP}
-    t-pot_hostname: ${MY_HOSTNAME}
-  json.keys_under_root: true
 
 - type: log
   enabled: true
@@ -166,9 +96,6 @@ filebeat.inputs:
     - /data/heralding/log/auth.csv
   fields:
     type: Heralding
-    t-pot_ip_ext: ${MY_EXTIP}
-    t-pot_ip_int: ${MY_INTIP}
-    t-pot_hostname: ${MY_HOSTNAME}
 
 - type: log
   enabled: true
@@ -176,10 +103,6 @@ filebeat.inputs:
     - /data/honeypy/log/json.log
   fields:
     type: Honeypy
-    t-pot_ip_ext: ${MY_EXTIP}
-    t-pot_ip_int: ${MY_INTIP}
-    t-pot_hostname: ${MY_HOSTNAME}
-  json.keys_under_root: true
 
 - type: log
   enabled: true
@@ -187,10 +110,6 @@ filebeat.inputs:
     - /data/honeysap/log/honeysap-external.log
   fields:
     type: Honeysap
-    t-pot_ip_ext: ${MY_EXTIP}
-    t-pot_ip_int: ${MY_INTIP}
-    t-pot_hostname: ${MY_HOSTNAME}
-  json.keys_under_root: true
 
 - type: log
   enabled: true
@@ -198,31 +117,22 @@ filebeat.inputs:
     - /data/honeytrap/log/attackers.json
   fields:
     type: Honeytrap
-    t-pot_ip_ext: ${MY_EXTIP}
-    t-pot_ip_int: ${MY_INTIP}
-    t-pot_hostname: ${MY_HOSTNAME}
   json.keys_under_root: true
-
+ 
 - type: log
   enabled: true
   paths:
     - /data/ipphoney/log/ipphoney.json
   fields:
     type: Ipphoney
-    t-pot_ip_ext: ${MY_EXTIP}
-    t-pot_ip_int: ${MY_INTIP}
-    t-pot_hostname: ${MY_HOSTNAME}
   json.keys_under_root: true
-
+ 
 - type: log
   enabled: true
   paths:
     - /data/mailoney/log/commands.log
   fields:
     type: Mailoney
-    t-pot_ip_ext: ${MY_EXTIP}
-    t-pot_ip_int: ${MY_INTIP}
-    t-pot_hostname: ${MY_HOSTNAME}
 
 - type: log
   enabled: true
@@ -230,10 +140,6 @@ filebeat.inputs:
     - /data/medpot/log/medpot.log
   fields:
     type: Medpot
-    t-pot_ip_ext: ${MY_EXTIP}
-    t-pot_ip_int: ${MY_INTIP}
-    t-pot_hostname: ${MY_HOSTNAME}
-  json.keys_under_root: true
 
 - type: log
   enabled: true
@@ -241,20 +147,6 @@ filebeat.inputs:
     - /data/rdpy/log/rdpy.log
   fields:
     type: Rdpy
-    t-pot_ip_ext: ${MY_EXTIP}
-    t-pot_ip_int: ${MY_INTIP}
-    t-pot_hostname: ${MY_HOSTNAME}
-
-- type: log
-  enabled: true
-  paths:
-    - /data/redishoneypot/log/redishoneypot.log
-  fields:
-    type: RedisHoneypot
-    t-pot_ip_ext: ${MY_EXTIP}
-    t-pot_ip_int: ${MY_INTIP}
-    t-pot_hostname: ${MY_HOSTNAME}
-  json.keys_under_root: true
 
 - type: log
   enabled: true
@@ -262,10 +154,6 @@ filebeat.inputs:
     - /data/nginx/log/access.log
   fields:
     type: NGINX
-    t-pot_ip_ext: ${MY_EXTIP}
-    t-pot_ip_int: ${MY_INTIP}
-    t-pot_hostname: ${MY_HOSTNAME}
-  json.keys_under_root: true
 
 - type: log
   enabled: true
@@ -273,16 +161,23 @@ filebeat.inputs:
     - /data/tanner/log/tanner_report.json
   fields:
     type: Tanner
-    t-pot_ip_ext: ${MY_EXTIP}
-    t-pot_ip_int: ${MY_INTIP}
-    t-pot_hostname: ${MY_HOSTNAME}
   json.keys_under_root: true
+
+processors:
+  - drop_fields:
+      fields: ["agent", "ecs", "log", "host", "@metadata"]
+  - add_fields:
+      target: host_info
+      fields:
+        exit_ip: "${MY_EXTIP}"
+        in_ip: "${MY_INTIP}"
+        hostname: "${MY_HOSTNAME}"
 
 output.logstash:
   enabled: true
-  hosts: ["192.168.253.133:5044"]
+  hosts: ["<YOUR_CENTRAL_LOGSTASH_IP>:5044"]
   ssl.enabled: true
   ssl.verification_mode: none
-  ssl.certificate_authorities: ["/etc/filebeat/rootCA.crt"]
-  ssl.certificate: "/etc/filebeat/filebeat.crt"
-  ssl.key: "/etc/filebeat/filebeat.key"
+  ssl.certificate_authorities: ["/usr/share/filebeat/rootCA.crt"]
+  ssl.certificate: "/usr/share/filebeat/filebeat.crt"
+  ssl.key: "/usr/share/filebeat/filebeat.key"
